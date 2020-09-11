@@ -4,3 +4,7 @@ npm i express
 npm i nodemon --save-dev
 add "start": "nodemon src/index.js" package.json
 
+git init
+git commit -m ""
+git remote
+git push
