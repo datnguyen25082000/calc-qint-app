@@ -1,0 +1,6 @@
+npm init
+create index.js file
+npm i express
+npm i nodemon --save-dev
+add "start": "nodemon src/index.js" package.json
+

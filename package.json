@@ -1,0 +1,36 @@
+{
+  "name": "calc-app",
+  "version": "1.0.0",
+  "description": "calc-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datnguyen25082000/calc-qint-app.git"
+  },
+  "keywords": [
+    "calc",
+    "large",
+    "number",
+    "calc",
+    "tinh",
+    "so",
+    "lon",
+    "qint"
+  ],
+  "author": "datnguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/datnguyen25082000/calc-qint-app/issues"
+  },
+  "homepage": "https://github.com/datnguyen25082000/calc-qint-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
