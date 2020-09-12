@@ -15,7 +15,37 @@
         {{{body}}}
     </div>
     {{> footer}}
+    <script>
+        functionOnChange = (e) => {
+            const forms = document.getElementsByClassName("form-type");
+  
+            for(let i = 0; i < forms.length; i++) {
+                forms[i].style.display = "none";
+            }
 
+            formSelected = document.getElementById(e.value).style.display = "block";
+        }
+
+        function loadResult(e) {
+            e.preventDefault();
+
+            var str = "";
+            for(let i = 0; i < e.target.length - 1; i++) {
+                str += e.target[i].name + "=" + e.target[i].value + "&";
+            }
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("result").value = this.responseText;
+                }
+            };
+
+            xhttp.open("GET", "/calc/query?" + str);
+            xhttp.send();
+        }
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

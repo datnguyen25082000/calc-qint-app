@@ -1,1 +1,163 @@
-<h1>hahahah</h1>
+<form style="margin-top: 100px">
+    <fieldset class="form-group">
+        <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+            <input class="form-check-input" onchange="functionOnChange(this)" type="radio" name="type" id="gridRadios1" value="form-type-1" checked>
+            <label class="form-check-label" for="gridRadios1">
+                Convert factor
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" onchange="functionOnChange(this)" type="radio" name="type" id="gridRadios2" value="form-type-2">
+            <label class="form-check-label" for="gridRadios2">
+                Calc two number
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" onchange="functionOnChange(this)" type="radio" name="type" id="gridRadios3" value="form-type-3">
+            <label class="form-check-label" for="gridRadios3">
+                ROR, ROL, NOT
+            </label>
+            </div>
+        </div>
+        </div>
+    </fieldset> 
+</form>
+
+<form onsubmit="return loadResult(event)" class="form-submit">
+    <div id="form-type-1" class="form-type">
+        <div class="form-group row">
+            <label for="number2" class="col-sm-2 col-form-label">Factor 1</label>
+            <div class="col-sm-10">
+                <select  name="factor1">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10" selected>10</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="number2" class="col-sm-2 col-form-label">Factor 2</label>
+            <div class="col-sm-10">
+                <select  name="factor2">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="number" class="col-sm-2 col-form-label">Number</label>
+            <div class="col-sm-10">
+            <input type="text" name="number" class="form-control">
+            </div>
+        </div>
+
+         <div class="form-group row">
+            <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">calculate</button>
+            </div>
+    </div>
+    </div>
+</form>
+
+<form onsubmit="return loadResult(event)" class="form-submit">
+      <div id="form-type-2" style="display:none" class="form-type">
+        <div class="form-group row">
+            <label for="factor" class="col-sm-2 col-form-label">Factor</label>
+            <div class="col-sm-10">
+                <select name="factor">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10" selected>10</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="number1" class="col-sm-2 col-form-label">Number 1</label>
+            <div class="col-sm-10">
+            <input type="text" name="number1" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="operator" class="col-sm-2 col-form-label">Operator</label>
+            <div class="col-sm-10">
+                <select name="operator">
+                    <option value="+" selected>+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="<<">&#60;&#60;</option>
+                    <option value=">>">&#62;&#62;</option>
+                    <option value="and">and</option>
+                    <option value="|">or</option>
+                    <option value="^">xor</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="number2" class="col-sm-2 col-form-label">Number 2</label>
+            <div class="col-sm-10">
+            <input type="text" name="number2" class="form-control" >
+            </div>
+        </div>
+
+         <div class="form-group row">
+            <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">calculate</button>
+            </div>
+    </div>
+    </div>
+
+</form>
+
+<form onsubmit="return loadResult(event)" class="form-submit">
+     <div id="form-type-3" style="display: none" class="form-type">
+        <div class="form-group row">
+            <label for="factor" class="col-sm-2 col-form-label">Factor</label>
+            <div class="col-sm-10">
+                <select name="factor">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10" selected>10</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="operator" class="col-sm-2 col-form-label">Operator</label>
+            <div class="col-sm-10">
+                <select  name="operator">
+                    <option value="~" selected>not</option>
+                    <option value="rol">rol</option>
+                    <option value="ror">ror</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="number" class="col-sm-2 col-form-label">Number</label>
+            <div class="col-sm-10">
+            <input type="text" name="number" class="form-control">
+            </div>
+        </div>
+
+
+         <div class="form-group row">
+            <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">calculate</button>
+            </div>
+    </div>
+    </div>
+</form>
+
+ <div class="form-group row">
+            <label for="number2" class="col-sm-2 col-form-label">Result</label>
+            <div class="col-md-10">
+            <input type="text" name="result" class="form-control" disabled value="" id="result">
+            </div>
+</div>
