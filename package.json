@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,9 +29,11 @@
   },
   "homepage": "https://github.com/datnguyen25082000/calc-qint-app#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0"
   },
   "devDependencies": {
+    "node-sass": "^4.14.1",
     "nodemon": "^2.0.4"
   }
 }

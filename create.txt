@@ -4,7 +4,13 @@ npm i express
 npm i nodemon --save-dev
 add "start": "nodemon src/index.js" package.json
 
-git init
+git init // first time
+git add .
 git commit -m ""
-git remote
-git push
+git remote // first time
+git push origin master
+
+npm i express-handlebars
+npm i node-sass --save-dev
+theem "watch": "node-sass --watch input output" -> npm run watch
+file nodemon.json : listen update from ... file and restart auto
